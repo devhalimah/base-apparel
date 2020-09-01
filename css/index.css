@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ce9797;
+    background: repeating-linear-gradient(135deg, white, #fff5f5);
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.section-1 {
+    text-align: center;
+    padding: 15px;
+}
+h1 {
+    text-transform: uppercase;
+    color: #413a3a;
+    letter-spacing: 0.3em;
+    font-weight: 600;
+    font-size: 45px;
+}
+p{
+    line-height: 1.6;
+}
+.first-child {
+    color: #ce9797;
+    font-weight: 300;
+}
+form{
+	margin-top: 50px;
+}
+form input {
+    border-radius: 50px;
+    width: 85%;
+    padding: 20.5px 17px 13px 17px;
+    background: transparent;
+    border: 1px solid #ce9797;
+    outline: none;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	font-size: 14.5px;
+	text-indent: 10px;
+}
+button{
+    display: inline;
+    background: repeating-linear-gradient(135deg, #f8bfbf, #ee8c8c);
+    border-radius: 50px;
+    border: 1px solid #f8bfbf;
+    outline: none;
+    padding: 16.5px 35px 15.5px 35px;
+    cursor: pointer;
+	margin-left: -86px;
+	box-shadow:
+	5px 8px 20px #f8bfbf,
+	2px 2px 10px rgb(0,0,0,0.1);
+}
+button:hover {
+    border: 1px solid #ce9797;
+}
+button:active {
+    transform: translateY(1px);
+}
+#error{
+	  color: hsl(0, 36%, 62%);
+	  font-size: 14px;
+	  text-align: left;
+	  margin-left: 10%;
+	  font-weight: 400;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: #3e52a3;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 300px){ /* FOR VERY SMALL MOBILE DEVICES */
+    body{
+		word-wrap: break-word;
+	}
+    .mobile-logo{
+		position: relative;
+		top: 20px;
+	    left: 20px;
+		margin-bottom: 35px;
+	}
+	.desktop-logo{
+	display: none;
+    }
+    .hero-desktop {
+    display: none;
+    }
+	.hero-mobile{
+		height: 250px;
+		width: 100%;
+	}
+	h1{
+		font-size: 170%;
+	}
+	form input{
+		width: 65%;
+		text-indent: 0px;
+		font-weight: 600;
+		font-size: 10.4px;
+		letter-spacing: 0.2px;
+	}
+	button{
+		margin-left: -50px;
+		padding: 11px 25px 12.5px 25px;
+	}
+}
+
+@media only screen and (max-width: 599px){ /* FOR MOBILE DEVICES */
+	.mobile-logo{
+	position: relative;
+	top: 40px;
+	left: 40px;
+	margin-bottom: 70px;
+    }
+    .desktop-logo{
+	display: none;
+    }
+    .hero-desktop {
+    display: none;
+    }
+    .hero-mobile {
+    width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (orientation: landscape){ /* FOR DESKTOP, TABLETS AND LANDSCAPE ORIENTATION */
+
+    body{
+		background-image: url("../images/bg-pattern-desktop.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+	}
+	.container{
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 0px;
+	}
+	.section-1{
+		text-align: left;
+		padding: 15px 150px;
+	}
+	.desktop-logo{
+		position: relative;
+	    top: 40px;
+	    margin-bottom: 70px;
+	}
+	.mobile-logo{
+		display: none !important;
+	}
+	h1{
+		padding-top: 50px;
+		font-size: 60px;
+	}
+	.hero-desktop{
+		
+	}
+	.hero-mobile{
+		display: none !important;
+	}
+	.attribution{
+		display: none;
+	}
+}
