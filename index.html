@@ -12,29 +12,42 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <header>
-    <img src="./images/logo.svg" alt="logo" class="mobile-logo">
-  </header>
-  
   <div class="container">
-    <section class="section-1">
-	    <img src="./images/logo.svg" alt="logo" class="desktop-logo">
-        <h1><span class="first-child">We're</span><br/>coming<br/>soon</h1>
+  
+    <div class="content">
+	
+	    <div id="alert">
+            E-mail registered successfully &check; &check; &check;
+	        <span class="close" onclick="document.getElementById('alert').style.display='none'" title="Close">&times;</span>
+        </div> <!-- END OF ALERT BOX -->
+		
+        <div>
+            <img src="./images/logo.svg" alt="base-apparel-logo" class="logo">
+        </div>
+		
+		<div> <!-- IMAGE TO DISPLAY ON SMALLER SREEN RESOLUTIONS -->
+		    <img src="images/hero-mobile.jpg" alt="base-apparel-hero" class="hero-mobile">
+		</div>
+    
+        <h1><span>We're</span><br/>coming<br/>soon</h1>
 
         <p>Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-        <form name="form" onsubmit="return validate()" autocomplete="off">
-        <label for="email"><input type="text" name="email" placeholder="Email Address" id="email"></label>
-        <button type="submit" name="button"><img src="./images/icon-arrow.svg" alt="icon-arrow"></button>
+        <form name="form" onsubmit="return validate()">
+        <label for="email">
+		    <input type="text" name="email" placeholder="Email Address" id="email">
+		</label>
+        <button type="submit" name="button">
+		    <img src="./images/icon-arrow.svg" alt="icon-arrow">
+		</button>
         <p id="error"></p>
         </form>
-    </section>
+    </div> <!-- END OF CONTENT -->
 	
-        <img src="./images/hero-desktop.jpg" alt="hero" class="hero-desktop">
-	<img src="images/hero-mobile.jpg" alt="hero" class="hero-mobile">
-   
-  </div>
+	<div class="image-container">
+        <img src="./images/hero-desktop.jpg" alt="base-apparel-hero" class="hero-desktop">
+	</div>
   
   <footer>
     <p class="attribution">
@@ -42,37 +55,9 @@
       Coded by <a href="https://github.com/devhalimah" target="_blank">Abdul-Azeez Halimah Olaolohun.</a>
     </p>
   </footer>
+ </div> <!-- END OF CONTAINER -->
   
-  <!-- JAVASCRIPT -->
-  <script>
-    function validate(){
-	                if(document.form.email.value == ""){ // IF INPUT IS EMPTY:
-					    document.getElementById('error').innerHTML = "Please provide a valid email"; //DISPLAY THIS TEXT
-						document.form.email.focus(); //FOCUS ON INPUT
-						document.form.email.style.backgroundImage = "url(./images/icon-error.svg)"; //DISPLAY THIS ICON
-		                document.form.email.style.backgroundRepeat = "no-repeat";
-		                document.form.email.style.backgroundPosition = "right 90px center";
-						document.form.email.style.border = "2px solid hsl(0, 93%, 68%)"; //CHANGE THE BORDER WIDTH & COLOR
-						document.form.email.placeholder = "";
-						document.form.button.style.borderWidth = "1px"; //INCREASE BUTTON BORDER-WIDTH
-						return false; //DO NOT SUBMIT
-					}
-					
-					var emailID = document.form.email.value;
-	                atpos = emailID.indexOf("@"); //PLACE A TEXT BEFORE "@" || PLACE "@" AFTER TEXT
-		            dotpos = emailID.lastIndexOf("."); //PLACE A TEXT AFTER "."
-	                if(atpos < 1 || (dotpos - atpos < 2)){ //IF "@" && "." ARE !WELL POSITIONED,
-					    document.getElementById('error').innerHTML = "Please provide a valid email"; //DISPLAY THIS TEXT
-						document.form.email.focus(); //FOCUS ON INPUT
-						document.form.email.style.backgroundImage = "url(./images/icon-error.svg)"; //DISPLAY THIS ICON
-		                document.form.email.style.backgroundRepeat = "no-repeat";
-		                document.form.email.style.backgroundPosition = "right 90px center";
-						document.form.email.style.border = "2px solid hsl(0, 93%, 68%)"; // CHANGE THE BORDER WIDTH & COLOR
-						document.form.button.style.borderWidth = "2px"; //INCREASE BUTTON BORDER-WIDTH
-						return false; //DO NOT SUBMIT
-					}
-					return ( true ); //SUBMIT FORM
-	}
-  </script>
+  <!-- EXTERNAL JAVASCRIPT -->
+  <script src="./script/index.js"></script>
 </body>
 </html>
