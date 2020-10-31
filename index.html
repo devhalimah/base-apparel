@@ -4,60 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
   
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <title>Limatek | Base Apparel coming soon page</title>
 
   <!-- EXTERNAL CSS -->
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <div class="container">
-  
-    <div class="content">
-	
+    <div class="container">
 	    <div id="alert">
-            E-mail registered successfully &check; &check; &check;
-	        <span class="close" onclick="document.getElementById('alert').style.display='none'" title="Close">&times;</span>
+            E-mail registered successfully &check;&check;&check;
+	        <span class="close" onclick="document.getElementById('alert').style.display='none'" title="Close">
+                 &times;
+            </span>
         </div> <!-- END OF ALERT BOX -->
 		
-        <div>
-            <img src="./images/logo.svg" alt="base-apparel-logo" class="logo">
+        <div class="logo-container">
+            <a href="#"><img src="./images/logo.svg" alt="base-apparel-logo" class="logo"></a>
         </div>
-		
-		<div> <!-- IMAGE TO DISPLAY ON SMALLER SREEN RESOLUTIONS -->
-		    <img src="images/hero-mobile.jpg" alt="base-apparel-hero" class="hero-mobile">
-		</div>
     
-        <h1><span>We're</span><br/>coming<br/>soon</h1>
+	    <div class="content">
+            <h1><span>We're</span><br/>coming<br/>soon</h1>
 
-        <p>Hello fellow shoppers! We're currently building our new fashion store. 
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+            <p>Hello fellow shoppers! We're currently building our new fashion store. 
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-        <form name="form" onsubmit="return validate()">
-        <label for="email">
-		    <input type="text" name="email" placeholder="Email Address" id="email">
-		</label>
-        <button type="submit" name="button">
-		    <img src="./images/icon-arrow.svg" alt="icon-arrow">
-		</button>
-        <p id="error"></p>
-        </form>
-    </div> <!-- END OF CONTENT -->
+            <form name="form" onsubmit="return validate()">
+                <label for="email">
+		        <input type="text" name="email" placeholder="Email Address" id="email">
+		        </label>
+                <button type="submit" name="button">
+		            <img src="./images/icon-arrow.svg" alt="icon arrow">
+		        </button>
+                <p id="error"></p>
+             </form>
+        </div> <!-- END OF CONTENT -->
 	
-	<div class="image-container">
-        <img src="./images/hero-desktop.jpg" alt="base-apparel-hero" class="hero-desktop">
-	</div>
+	    <div class="image-container">
+	        <picture>
+	            <!-- use this image if the screen is less than 800px wide -->
+	            <source srcset="./images/hero-mobile.jpg" media="(max-width:750px)">
+		
+		        <!-- use this image on higher screen widths -->
+                <img src="./images/hero-desktop.jpg" alt="apparel hero" class="ero-desktop" />
+	        </picture>
+	    </div> <!-- END OF IMAGE CONTAINER -->
+    </div> <!-- END OF CONTAINER -->
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a> <br/>
-      Coded by <a href="https://github.com/devhalimah" target="_blank">Abdul-Azeez Halimah Olaolohun.</a>
-    </p>
-  </footer>
- </div> <!-- END OF CONTAINER -->
-  
-  <!-- EXTERNAL JAVASCRIPT -->
-  <script src="./script/index.js"></script>
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="./script/index.js"></script>
 </body>
 </html>
